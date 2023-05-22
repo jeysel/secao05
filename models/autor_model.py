@@ -26,6 +26,12 @@ class AutorModel(settings.DBBaseModel):
 
     # Um autor pode ter várias tags
     tags: List[TagModel] = orm.relationship('TagModel', secondary=tags_autor, backref='taga', lazy='joined')
+    
+    @property
+    def get_tags_list(self):
+        lista: List[int] = []
 
-
-
+        for tag in self.tags:
+            lista.append(int(tag.id))
+        
+        return lista

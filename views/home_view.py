@@ -1,8 +1,10 @@
 from fastapi.routing import APIRouter
 from fastapi.requests import Request
+
 from core.configs import settings
 
 router = APIRouter()
+
 
 @router.get('/', name='index')
 async def index(request: Request):
@@ -81,6 +83,5 @@ async def portfolio_item(request: Request):
     context = {
         "request": request
     }
-
 
     return settings.TEMPLATES.TemplateResponse('home/portfolio_item.html', context=context)
