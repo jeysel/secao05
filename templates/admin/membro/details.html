@@ -11,14 +11,18 @@
                 <thead>
                     <tr>
                         <th>Nome</th>
+                        <th>E-mail</th>
                         <th>Função</th>
+                        <th>Senha</th>
                         <th>Imagem</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>{{ objeto.nome }}</td>
+                        <td>{{ objeto.email }}</td>
                         <td>{{ objeto.funcao }}</td>
+                        <td>{{ objeto.senha|truncate(7) }}...</td>
                         <td><a href="{{ url_for('media', path='membro/' + objeto.imagem) }}" target="_blank"><img src="{{ url_for('media', path='membro/' + objeto.imagem) }}" width="7%" height="auto"/></a></td>
                     </tr>
                 </tbody>

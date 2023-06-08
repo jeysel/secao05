@@ -9,6 +9,7 @@ from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 
 
 class ComentarioModel(settings.DBBaseModel):
+    __allow_unmapped__ = True
     __tablename__: str = 'comentarios'
 
     id: int = Column(Integer, primary_key=True, autoincrement=True)

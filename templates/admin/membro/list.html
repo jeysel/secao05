@@ -17,7 +17,9 @@
                         <th class="w-1"></th>
                         <th>ID</th>
                         <th>Nome</th>
+                        <th>E-mail</th>
                         <th>Função</th>
+                        <th>Senha</th>
                         <th>Imagem</th>
                     </tr>
                 </thead>
@@ -44,7 +46,9 @@
                             </td>
                             <td>{{ dado.id }}</td>
                             <td>{{ dado.nome }}</td>
+                            <td>{{ dado.email }}</td>
                             <td>{{ dado.funcao }}</td>
+                            <td>{{ dado.senha|truncate(7) }}...</td>
                             <td><a href="{{ url_for('media', path='membro/' + dado.imagem) }}" target="_blank">ver</a></td>
                         </tr>
                         {% endfor %}

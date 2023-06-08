@@ -28,6 +28,7 @@ comentarios_post = Table(
 
 
 class PostModel(settings.DBBaseModel):
+    __allow_unmapped__ = True
     """Posts do blog"""
     __tablename__: str = 'posts'
 

@@ -17,6 +17,7 @@ tags_autor = Table(
 
 
 class AutorModel(settings.DBBaseModel):
+    __allow_unmapped__ = True
     """Autor das postagens no blog"""
     __tablename__: str = 'autores'
 

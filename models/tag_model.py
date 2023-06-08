@@ -4,6 +4,7 @@ from sqlalchemy import Column, Integer, String
 
 
 class TagModel(settings.DBBaseModel):
+    __allow_unmapped__ = True
     """Temos tags em várias partes do website"""
     __tablename__: str = 'tags'
 

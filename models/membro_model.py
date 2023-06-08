@@ -11,6 +11,8 @@ class MembroModel(settings.DBBaseModel):
     nome: str = Column(String(100))
     funcao: str = Column(String(100))
     imagem: str = Column(String(100)) # 150x150
+    email: str = Column(String(100))
+    senha: str = Column(String(400))
 
     @validates('funcao')
     def _valida_funcao(self, key, value):

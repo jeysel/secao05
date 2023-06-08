@@ -6,6 +6,7 @@ from sqlalchemy import Column, Integer, String, DateTime
 
 
 class ProjetoModel(settings.DBBaseModel):
+    __allow_unmapped__ = True
     """No website temos um portfólio de projetos"""
     __tablename__: str = 'projetos'
 

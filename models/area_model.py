@@ -4,6 +4,7 @@ from sqlalchemy import Column, Integer, String
 
 
 class AreaModel(settings.DBBaseModel):
+    __allow_unmapped__ = True
     """Dúvidas respondidas no FAQ são categorizadas em áreas"""
     __tablename__: str = 'areas'
 
